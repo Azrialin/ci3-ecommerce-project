@@ -4,6 +4,7 @@ class Admin extends CI_Controller
 {
     public function index()
     {
+
         if ($this->session->userdata('aId')){
 
             $this->load->view('admin/header/header');
@@ -14,8 +15,7 @@ class Admin extends CI_Controller
             $this->load->view('admin/header/footer');
             $this->load->view('admin/header/htmlclose');
         } else {
-            $this->session->set_flashdata('error', 'Please log in 1st to access ur admin panel');
-            redirect('admin/login');
+            setFlashData('alert-danger','Please log in 1st to access ur admin panel','admin/login');
         }
 
     }
@@ -46,12 +46,10 @@ class Admin extends CI_Controller
                 };
                 var_dump($admindata);
             } else {
-                $this->session->set_flashdata('error', 'Please check your email or password');
-                redirect('admin/login');
+            setFlashData('alert-warning','Please check your email or password','admin/login');
             }
         } else {
-            $this->session->set_flashdata('error', 'Please Check the required fields~~');
-            redirect('admin/login');
+            setFlashData('alert-warning','Please Check the required fields~~','admin/login');
         }
     }
 
@@ -59,11 +57,9 @@ class Admin extends CI_Controller
     {
         if ($this->session->userdata('aId')){
             $this->session->set_userdata('aId','');
-            $this->session->set_flashdata('error', 'You have successfully logged out');
-            redirect('admin/login');
+            setFlashData('alert-danger','You have successfully logged out','admin/login');
         } else {
-            $this->session->set_flashdata('error', 'Please log in login now~');
-            redirect('admin/login');
+            setFlashData('alert-danger','Please log in login now~','admin/login');
         }
     }
 }
