@@ -64,7 +64,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -72,7 +72,7 @@
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -133,7 +133,45 @@
               </li>
             </ul>
           </li>
+
+
           <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Categories
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">1</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo site_url('admin/newCategory');?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>New Category</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- category -->
+          <!-- <li class="treeview">
+            <a href="#">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <span>Categories</span>
+              <span class="pull-right-contains">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="">
+                  New Category
+                </a>
+              </li>
+            </ul>
+          </li> -->
+
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
@@ -666,7 +704,7 @@
               <p>Informational</p>
             </a>
           </li>
-        </ul>
+        </ul> -->
       </nav>
       <!-- /.sidebar-menu -->
     </div>

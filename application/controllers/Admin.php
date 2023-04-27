@@ -62,4 +62,19 @@ class Admin extends CI_Controller
             setFlashData('alert-danger','Please log in login now~','admin/login');
         }
     }
+
+    public function newCategory()
+    {
+        if (adminLoggedIn()) {
+            $this->load->view('admin/header/header');
+            $this->load->view('admin/header/css');
+            $this->load->view('admin/header/navtop');
+            $this->load->view('admin/header/navleft');
+            $this->load->view('admin/home/index');
+            $this->load->view('admin/header/footer');
+            $this->load->view('admin/header/htmlclose');
+        } else {
+            setFlashData('alert-danger','Please log in first to add your category.','admin/login');
+        }
+    }
 }

@@ -8,3 +8,17 @@ function setFlashData($class,$message,$url)
     $CI->session->set_flashdata('message', $message);
     redirect($url);
 }
+
+function adminLoggedIn()
+{
+    $CI = get_instance();
+    $CI->load->library('session');
+    if ($CI->session->userdata('aId')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+// $this->session->userdata('aId')
